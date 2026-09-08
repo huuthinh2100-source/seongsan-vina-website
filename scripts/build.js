@@ -5,4 +5,6 @@ const dest=path.join(root,'dist');fs.mkdirSync(dest,{recursive:true});fs.cpSync(
 const config={supabaseUrl:process.env.SUPABASE_URL||'',supabaseAnonKey:process.env.SUPABASE_ANON_KEY||'',leadEndpoint:process.env.LEAD_ENDPOINT||''};
 fs.writeFileSync(path.join(dest,'assets/runtime-config.js'),'window.SITE_CONFIG='+JSON.stringify(config).replace(/</g,'\\u003c')+';');
 for(const file of fs.readdirSync(dest).filter(p=>p.endsWith('.html'))){const p=path.join(dest,file);let html=fs.readFileSync(p,'utf8');html=html.replace('</head>','<script defer src="assets/runtime-config.js"></script></head>');fs.writeFileSync(p,html);}
+require('./seo')(dest);
+require('./build-i18n')(dest);
 console.log('Built static website in dist; runtime configuration contains public client values only.');

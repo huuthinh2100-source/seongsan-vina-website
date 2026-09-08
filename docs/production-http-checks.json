@@ -1,0 +1,96 @@
+[
+  {
+    "path": "/bai-nd105",
+    "status": 200,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/bai-qcvn06",
+    "status": 200,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/case-study",
+    "status": 200,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/dich-vu-pccc",
+    "status": 200,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/du-an",
+    "status": 200,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/gioi-thieu",
+    "status": 200,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/",
+    "status": 200,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/lien-he",
+    "status": 200,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/nang-luc",
+    "status": 200,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/tai-lieu",
+    "status": 200,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/thu-vien-tieu-chuan",
+    "status": 200,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/tin-tuc",
+    "status": 200,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/xay-dung-me",
+    "status": 200,
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/robots.txt",
+    "status": 200,
+    "type": "text/plain; charset=utf-8"
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 200,
+    "type": "application/xml"
+  },
+  {
+    "path": "/assets/runtime-config.js",
+    "status": 200,
+    "type": "application/javascript; charset=utf-8"
+  },
+  {
+    "path": "/assets/og-seongsan.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "path": "/assets/industrial-film.mp4",
+    "status": 200,
+    "type": "video/mp4"
+  },
+  {
+    "path": "/not-a-real-page-qa",
+    "status": 404
+  }
+]
