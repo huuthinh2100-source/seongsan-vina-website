@@ -38,7 +38,6 @@ module.exports=function(dest){
    const out=path.join(dest,lang==='vi'?'':lang,slug+'.html');fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out,$.html());
   }
  }
- fs.writeFileSync(path.join(dest,'assets/language-router.js'),`document.addEventListener('click',function(e){var b=e.target.closest('#langSwitch button');if(!b)return;e.preventDefault();e.stopImmediatePropagation();var p=location.pathname.replace(/^\\/(en|ko|zh)(?=\\/|$)/,'').replace(/\\.html$/,'').replace(/\\/index$/,'');location.assign((b.dataset.lang==='vi'?'':'/'+b.dataset.lang)+(p==='/'?'':p)+location.hash||'/');},true);`);
  fs.writeFileSync(path.join(dest,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+all.map(url=>'<url><loc>'+url+'</loc></url>').join('')+'</urlset>');
  console.log('Built 52 static pages using supplied translations; reference-body Vietnamese is retained.');
 };

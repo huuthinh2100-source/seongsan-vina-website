@@ -54,3 +54,7 @@ Rich Results Test ngày 08/09/2026 thu thập thành công, phát hiện 2 mục
 Search Console URL-prefix đã xác minh bằng thẻ HTML ngày 08/09/2026; sitemap.xml gửi thành công, Google đọc thành công và khám phá 52 trang. Khám phá URL không đồng nghĩa đã index.
 
 Yêu cầu lập chỉ mục trang chủ đã được Google chấp nhận và đưa vào hàng đợi. Yêu cầu tiếp theo cho /dich-vu-pccc bị Google từ chối do vượt hạn ngạch ngày; cần thử lại ngày mai cho PCCC, giới thiệu, năng lực, liên hệ. Không gửi lặp để vượt quota. Xem google-checks.json.
+
+## Bổ sung kiểm tra build và URL ngôn ngữ
+
+Build hiện xóa riêng dist sau khi kiểm tra đường dẫn để không giữ asset/trang đã bị loại khỏi source. URL cũ ?lang=vi/en/ko/zh chuyển sang đường dẫn ngôn ngữ, giữ query chiến dịch và anchor; đổi ngôn ngữ cũng giữ các thông tin này. Có kiểm thử hồi quy và kiểm tra file giả đã xóa khỏi đầu ra. Các hạng mục DNS, email, Google quota và xác nhận dịch vụ Vercel vẫn còn như trên.
