@@ -23,4 +23,4 @@ Vercel dùng `vercel.json`: build `npm run build`, output `dist`. Cấu hình en
 
 ## Bàn giao
 
-Website: https://seongsan-vina-website.vercel.app. Xem [báo cáo bàn giao](docs/FINAL_REPORT.md) và [SEO checklist](docs/SEO_CHECKLIST.md) để phân biệt phần đã kiểm thử với DNS/email/Google còn chờ chủ tài khoản.
+Website: https://seongsan-vina-website.vercel.app. Xem [audit và so sánh trước/sau](docs/AUDIT.md), [báo cáo bàn giao](docs/FINAL_REPORT.md) và [SEO checklist](docs/SEO_CHECKLIST.md) để phân biệt phần đã kiểm thử với DNS/email/Google còn chờ chủ tài khoản.

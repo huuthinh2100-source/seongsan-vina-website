@@ -1,0 +1,101 @@
+{
+  "scope": "Historical localhost lab measurements; not current production field data",
+  "cliLimitation": "EPERM during temporary-folder cleanup after report export; not an exit-zero claim",
+  "measurements": [
+    {
+      "report": "mobile.report.json",
+      "sha256": "1d50711d046cb955b3ef3b10c6342a23e56651c79c8c746a90d2174fbefef03d",
+      "fetchTime": "2026-09-07T15:55:04.303Z",
+      "requestedUrl": "http://127.0.0.1:8765/",
+      "finalDisplayedUrl": "http://127.0.0.1:8765/",
+      "lighthouseVersion": "13.4.1",
+      "runtimeError": null,
+      "scores": {
+        "performance": 66,
+        "accessibility": 98,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lcpMs": 6027.911,
+      "cls": 0,
+      "totalBytes": 853125
+    },
+    {
+      "report": "desktop.report.json",
+      "sha256": "86d245b1a7608b25eb8aa8e9502c37fe0058bc49ba8c4f7967d2f9ea861466b4",
+      "fetchTime": "2026-09-07T15:55:43.893Z",
+      "requestedUrl": "http://127.0.0.1:8765/",
+      "finalDisplayedUrl": "http://127.0.0.1:8765/",
+      "lighthouseVersion": "13.4.1",
+      "runtimeError": null,
+      "scores": {
+        "performance": 98,
+        "accessibility": 98,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lcpMs": 885.0276250000001,
+      "cls": 0.0015064018523045096,
+      "totalBytes": 865721
+    },
+    {
+      "report": "phase3-mobile-accepted.report.json",
+      "sha256": "75194e02ce729934d8a043aa24f689b583327f40d437c1412352051cc24dfb8f",
+      "fetchTime": "2026-09-08T00:03:37.626Z",
+      "requestedUrl": "http://127.0.0.1:8770/",
+      "finalDisplayedUrl": "http://127.0.0.1:8770/",
+      "lighthouseVersion": "13.4.1",
+      "runtimeError": null,
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lcpMs": 1965.3959999999997,
+      "cls": 0,
+      "totalBytes": 204190
+    },
+    {
+      "report": "phase3-desktop-accepted.report.json",
+      "sha256": "ab559ffc9681648c99db870d4ba9be3b9050afd6f66f5c5a4debd0b5080357af",
+      "fetchTime": "2026-09-08T00:04:27.386Z",
+      "requestedUrl": "http://127.0.0.1:8770/",
+      "finalDisplayedUrl": "http://127.0.0.1:8770/",
+      "lighthouseVersion": "13.4.1",
+      "runtimeError": null,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lcpMs": 507.67750000000007,
+      "cls": 0.0002239490858755029,
+      "totalBytes": 1227772
+    },
+    {
+      "report": "phase3-service-mobile.report.json",
+      "sha256": "17365fffd15c27ea27770b15b5dd464ddc4354ab183c071d277b4ee90c20e72b",
+      "fetchTime": "2026-09-08T00:04:27.381Z",
+      "requestedUrl": "http://127.0.0.1:8770/dich-vu-pccc.html",
+      "finalDisplayedUrl": "http://127.0.0.1:8770/dich-vu-pccc.html",
+      "lighthouseVersion": "13.4.1",
+      "runtimeError": null,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100,
+        "agentic-browsing": 100
+      },
+      "lcpMs": 1675.302,
+      "cls": 0,
+      "totalBytes": 228554
+    }
+  ]
+}

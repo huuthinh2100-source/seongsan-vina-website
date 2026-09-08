@@ -5,7 +5,7 @@
 - Production: https://seongsan-vina-website.vercel.app
 - Repo public: https://github.com/huuthinh2100-source/seongsan-vina-website
 - Mã nguồn làm việc: thư mục `seongsan-vina-web`, tách khỏi workspace có hồ sơ riêng.
-- Bản dịch: `/en`, `/ko`, `/zh`; 52 URL đã kiểm tra HTTP 200. Một số thân bài tham chiếu giữ VI gốc; alt ảnh đã được dịch EN/KO/ZH.
+- Bản dịch: `/en`, `/ko`, `/zh`; 52 URL đã kiểm tra HTTP 200. Các thân bài tham chiếu và alt ảnh đã được dịch EN/KO/ZH; chưa có người bản ngữ nghiệm thu.
 
 ## Thiết kế, nội dung và media
 
@@ -26,7 +26,7 @@ Kết quả lab Phase 3 đo local trước khi deploy, không phải dữ liệu
 | Desktop Performance | 98 | 100 |
 | Desktop LCP | 0,89 s | 0,51 s |
 
-Accessibility/Best Practices/SEO trong báo cáo local cuối đạt 100. Lighthouse CLI đã tạo JSON không runtimeError nhưng gặp lỗi EPERM khi dọn thư mục; điểm đọc từ báo cáo, không gọi toàn bộ lệnh CLI là exit 0. Cấu hình preview server cũng đổi giữa các lần đo, nên không quy toàn bộ chênh lệch cho code. Báo cáo/screenshot Phase 1–3 giữ tại workspace kiểm tra ban đầu.
+Accessibility/Best Practices/SEO trong báo cáo local cuối đạt 100. Lighthouse CLI đã tạo JSON không runtimeError nhưng gặp lỗi EPERM khi dọn thư mục; điểm đọc từ báo cáo, không gọi toàn bộ lệnh CLI là exit 0. Cấu hình preview server cũng đổi giữa các lần đo, nên không quy toàn bộ chênh lệch cho code. [AUDIT.md](AUDIT.md) tổng hợp phát hiện và so sánh trước/sau; số đo trích lại từ năm JSON gốc kèm SHA-256 nằm trong [bằng chứng Lighthouse](lighthouse/phase1-phase3-measurements.json). Báo cáo gốc đầy đủ và screenshot Phase 1–3 vẫn giữ tại workspace kiểm tra ban đầu.
 
 ## Kiểm thử và triển khai
 
