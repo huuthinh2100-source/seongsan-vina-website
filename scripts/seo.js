@@ -24,6 +24,7 @@ module.exports=function(dest){
   $('title').text(title).removeAttr('data-i18n');$('meta[name="description"]').attr('content',description);
   $('link[rel="canonical"],meta[property^="og:"],meta[name^="twitter:"],script[type="application/ld+json"]').remove();
   const head=$('head');head.append($('<link>').attr({rel:'canonical',href:url}));
+  head.append($('<meta>').attr({name:'google-site-verification',content:'MYaoB9e0imzun6nPQxk0MQeQ4MeYvkYqyE1lmJ9l1pk'}));
   const tags={'og:type':'website','og:site_name':'Seongsan Vina','og:title':title,'og:description':description,'og:url':url,'og:locale':'vi_VN','og:image':base+'/assets/og-seongsan.jpg','og:image:width':'1200','og:image:height':'630','og:image:alt':'Minh họa lĩnh vực công nghiệp Seongsan Vina'};
   for(const [property,content] of Object.entries(tags))head.append($('<meta>').attr({property,content}));
   for(const [name,content] of Object.entries({'twitter:card':'summary_large_image','twitter:title':title,'twitter:description':description,'twitter:image':base+'/assets/og-seongsan.jpg'}))head.append($('<meta>').attr({name,content}));
