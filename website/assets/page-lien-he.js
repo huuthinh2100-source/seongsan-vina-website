@@ -54,7 +54,7 @@ var I18N = {"en":{"c.top.addr":"23 Thi Dua St., Tien Cat Ward, Viet Tri City, Ph
     if(btn){btn.disabled=true;btn.textContent=window.seongsanCopy('sending');}
     document.getElementById('form-status').textContent=''; var controller=new AbortController(); var requestTimer=setTimeout(function(){controller.abort();},15000);
     var payload={name:g('name'),company:g('company')||null,phone:g('phone'),email:g('email')||null,service:g('service')||null,message:g('msg')||null,source:'website',site:'seongsan'};
-    fetch(CRM_URL+'/rest/v1/leads',{method:'POST',signal:controller.signal,headers:{'apikey':CRM_KEY,'Authorization':'Bearer '+CRM_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify(payload)})
+    fetch((window.SITE_CONFIG||{}).leadEndpoint||CRM_URL+'/functions/v1/seongsan-submit',{method:'POST',signal:controller.signal,headers:{'apikey':CRM_KEY,'Authorization':'Bearer '+CRM_KEY,'Content-Type':'application/json'},body:JSON.stringify(payload)})
     .then(function(r){ clearTimeout(requestTimer);
       if(!r.ok){throw new Error('HTTP '+r.status);}
       form.reset();

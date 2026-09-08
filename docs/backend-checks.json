@@ -1,0 +1,44 @@
+{
+  "health": [
+    200,
+    {
+      "ok": true,
+      "service": "seongsan-submit",
+      "emailConfigured": false
+    }
+  ],
+  "invalid": [
+    400,
+    {
+      "ok": false,
+      "error": "Invalid contact details"
+    }
+  ],
+  "honeypot": [
+    200,
+    {
+      "ok": true
+    }
+  ],
+  "valid": [
+    201,
+    {
+      "ok": true,
+      "id": "80c62835-73e5-477e-9de5-dc4111b21650",
+      "notification": "pending"
+    }
+  ],
+  "direct_rest_rejected": [
+    401,
+    {
+      "code": "42501",
+      "details": null,
+      "hint": null,
+      "message": "new row violates row-level security policy for table \"leads\""
+    }
+  ],
+  "anonymous_read": [
+    200,
+    []
+  ]
+}
