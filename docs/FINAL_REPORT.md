@@ -114,3 +114,9 @@ Lint, build 52 trang, check-build, router và yêu cầu tài liệu đạt. Ho�
 [Google Search Central](https://developers.google.com/search/updates) thông báo FAQ rich results ngừng xuất hiện từ 07/05/2026 và gỡ tài liệu vào 15/06/2026. FAQPage vẫn là kiểu dữ liệu [Schema.org](https://schema.org/FAQPage), nhưng không được báo cáo là đã có FAQ rich result hoặc yêu cầu Rich Results Test công nhận kiểu đã ngừng hỗ trợ.
 
 DNS kiểm tra lại vẫn là 36.50.55.80. Việc bổ sung schema không giải quyết phần tên miền, cấu hình email hoặc xác nhận dịch vụ Vercel còn thiếu. Lint/build/check-build/router/document-request đạt.
+
+## Responsive sau dịch — Thư viện và Kiến thức
+
+Phát hiện hai lỗi ở EN/360 px: nhóm nút tải vượt mép thẻ Thư viện do flex không xuống dòng; cột FAQ trang Kiến thức rộng hơn vùng nội dung khoảng 4 px do kích thước tối thiểu của grid. Đã cho nhóm nút co giãn/xuống dòng, giữ chiều cao chạm tối thiểu 44 px, cho cột co về đúng chiều rộng và ngắt chuỗi dài khi cần.
+
+Kiểm tra trình duyệt local trên 24 tổ hợp: hai trang × EN/KO/ZH × 360/768/1024/1440 px, không còn document overflow hoặc nút vượt thẻ. Mở FAQ FM-200 ở EN/360 px: câu trả lời hiển thị và không tràn ngang. Ảnh và số đo lưu trong `docs/screenshots/i18n/`; phạm vi này không thay cho kiểm tra mọi trang/ngôn ngữ. Lint/build/check-build đạt.
