@@ -74,3 +74,9 @@ Biểu mẫu Tài liệu hiện là luồng mở bản nháp email, khác form L
 Đã dịch tám phần nội dung, tiêu đề, bảng thông tin dự án và CTA của case study sang EN/KO/ZH. Kiểm tra không còn đoạn thân bài chưa có bản dịch; giữ nguyên số liệu, tên Fabinno Vina, mã tiêu chuẩn và nhãn ảnh minh họa. Nội dung tiếng Việt được giữ nguyên (chỉ khác khoảng trắng cuối file). Bản dịch phản ánh nội dung nguồn, không phải bằng chứng độc lập xác minh kết quả dự án hoặc hiệu lực các tham chiếu pháp lý cũ.
 
 Đã bỏ biểu tượng phát ở ô video nghiệm thu chưa có file phát. Chưa có video nghiệm thu thực tế để giao. Lint, build 52 trang, kiểm tra liên kết/metadata/JS, kiểm thử router và yêu cầu tài liệu đều đạt. Các bài pháp lý và thư viện vẫn còn phần nội dung tiếng Việt cần xử lý tiếp.
+
+## Bài QCVN 06 — bản dịch EN/KO/ZH
+
+Đã bổ sung bản dịch toàn bộ thân bài, thông tin tác giả/ngày cập nhật, CTA và nhãn nguồn. Giữ nguyên nội dung nguồn tiếng Việt, mốc cập nhật tháng 7/2026, mã văn bản và URL tài liệu. Kiểm tra độ phủ các đoạn ngoài dictionary cũ đạt; build 52 trang, lint, router và luồng yêu cầu tài liệu đạt.
+
+Đối chiếu riêng hai mốc hiệu lực: [Thông tư 06/2022/TT-BXD](https://vanban.chinhphu.vn/?classid=1&docid=207059&pageid=27160&typegroupid=6) ghi 16/01/2023; [Thông tư 09/2023/TT-BXD](https://congbao.chinhphu.vn/van-ban/thong-tu-so-09-2023-tt-bxd-40285.htm) ghi 01/12/2023. Đối chiếu này không phải kiểm toán toàn bộ nội dung pháp lý của bài hoặc xác nhận mọi tham chiếu còn hiệu lực tại ngày đọc. Trang kiến thức, bài Nghị định 105 và thư viện còn phần nội dung chưa dịch.
