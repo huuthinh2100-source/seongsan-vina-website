@@ -5,7 +5,7 @@
 - Production: https://seongsan-vina-website.vercel.app
 - Repo public: https://github.com/huuthinh2100-source/seongsan-vina-website
 - Mã nguồn làm việc: thư mục `seongsan-vina-web`, tách khỏi workspace có hồ sơ riêng.
-- Bản dịch: `/en`, `/ko`, `/zh`; 52 URL đã kiểm tra HTTP 200. Một số thân bài tham chiếu và alt giữ VI gốc.
+- Bản dịch: `/en`, `/ko`, `/zh`; 52 URL đã kiểm tra HTTP 200. Một số thân bài tham chiếu giữ VI gốc; alt ảnh đã được dịch EN/KO/ZH.
 
 ## Thiết kế, nội dung và media
 
@@ -58,3 +58,7 @@ Yêu cầu lập chỉ mục trang chủ đã được Google chấp nhận và 
 ## Bổ sung kiểm tra build và URL ngôn ngữ
 
 Build hiện xóa riêng dist sau khi kiểm tra đường dẫn để không giữ asset/trang đã bị loại khỏi source. URL cũ ?lang=vi/en/ko/zh chuyển sang đường dẫn ngôn ngữ, giữ query chiến dịch và anchor; đổi ngôn ngữ cũng giữ các thông tin này. Có kiểm thử hồi quy và kiểm tra file giả đã xóa khỏi đầu ra. Các hạng mục DNS, email, Google quota và xác nhận dịch vụ Vercel vẫn còn như trên.
+
+## Bổ sung ngôn ngữ cho media
+
+Đã dịch 25 mô tả ảnh hiện có cùng nhãn mở ảnh, menu, video và bản đồ sang EN/KO/ZH. Giữ nguyên nghĩa, giữ nhãn minh họa ở các ảnh được gắn nhãn đó trong nguồn. Kiểm tra đầu ra không còn alt ảnh tiếng Việt trên 39 trang ngoại ngữ. Đây chưa phải xác nhận đã dịch toàn bộ thân bài.
