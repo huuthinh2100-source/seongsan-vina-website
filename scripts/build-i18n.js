@@ -1,6 +1,7 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),{load}=require('cheerio');
 const mediaTranslations=require('./media-translations.json');
+const libraryTranslations=require('./library-translations.json');
 const pageTranslations={'tai-lieu':require('./document-translations.json'),'case-study':require('./case-study-translations.json'),'bai-qcvn06':require('./qcvn06-translations.json'),'bai-nd105':{...require('./qcvn06-translations.json'),...require('./nd105-translations.json')}};
 const labels={en:['Industry construction & fire protection','About us','Capabilities','Fire protection services','Industrial construction & M&E','Projects','Factory fire system maintenance','Knowledge centre','Decree 105/2025 on fire protection','QCVN 06 fire safety regulation','Technical standards library','Documents & checklists','Contact & quotation'],ko:['산업 건설 및 소방','회사 소개','시공 역량','소방 서비스','산업 건설 및 기계전기','프로젝트','공장 소방 시스템 유지보수','기술 자료 및 소식','소방 시행령 105/2025','화재 안전 규정 QCVN 06','기술 표준 자료실','문서 및 점검표','문의 및 견적'],zh:['工业建设与消防','公司介绍','施工能力','消防服务','工业建设与机电','项目经验','工厂消防系统维护','知识中心','消防法令105/2025','消防安全规范QCVN 06','技术标准资料库','文件与检查清单','联系与报价']};
 const slugs=['index','gioi-thieu','nang-luc','dich-vu-pccc','xay-dung-me','du-an','case-study','tin-tuc','bai-nd105','bai-qcvn06','thu-vien-tieu-chuan','tai-lieu','lien-he'];
@@ -19,7 +20,7 @@ module.exports=function(dest){
    const $=load(src),url=base+pathFor(slug,lang);all.push(url);$('html').attr('lang',lang==='zh'?'zh-Hans':lang);
    if(lang!=='vi'){
     const languageIndex=['en','ko','zh'].indexOf(lang);
-    const bodyTranslations=pageTranslations[slug];
+    const bodyTranslations=slug==='thu-vien-tieu-chuan'?libraryTranslations:pageTranslations[slug];
     if(bodyTranslations){
      $('option:not([value])').each((_,e)=>$(e).attr('value',$(e).text()));
      $('main').find('*').contents().each((_,node)=>{if(node.type!=='text'||$(node.parent).closest('[data-i18n],[data-copy],script,style,svg').length)return;const value=node.data.trim(),translated=bodyTranslations[value]?.[languageIndex];if(translated)node.data=node.data.replace(value,translated);});
@@ -33,8 +34,6 @@ module.exports=function(dest){
     $('[data-copy]').each((_,e)=>{let n=$(e),v=copy[lang]?.[n.attr('data-copy')];if(v)n.html(v);});
     const title=labels[lang][i]+' | Seongsan Vina',desc=descriptions[lang](labels[lang][i]);if(title.length>60||desc.length>155)throw Error('Localized metadata too long '+slug+lang);
     $('title').text(title);$('meta[name="description"]').attr('content',desc);$('meta[property="og:title"],meta[name="twitter:title"]').attr('content',title);$('meta[property="og:description"],meta[name="twitter:description"]').attr('content',desc);
-    // Original reference articles contain Vietnamese text beyond the supplied translation dictionary.
-    if(slug==='thu-vien-tieu-chuan')$('main').prepend($('<p>').attr({class:'wrap'}).text({en:'The reference content below is retained in its original Vietnamese.',ko:'아래 참고 자료는 베트남어 원문으로 제공됩니다.',zh:'以下参考内容保留越南语原文。'}[lang]));
    }
    $('meta[property="og:locale"]').attr('content',{vi:'vi_VN',en:'en_US',ko:'ko_KR',zh:'zh_CN'}[lang]);
    $('link[rel="canonical"]').attr('href',url);$('meta[property="og:url"]').attr('content',url);
@@ -52,5 +51,5 @@ module.exports=function(dest){
   }
  }
  fs.writeFileSync(path.join(dest,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+all.map(url=>'<url><loc>'+url+'</loc></url>').join('')+'</urlset>');
- console.log('Built 52 static pages using supplied translations; reference-body Vietnamese is retained.');
+ console.log('Built 52 static pages using supplied and supplemental translations; see FINAL_REPORT for remaining content coverage.');
 };

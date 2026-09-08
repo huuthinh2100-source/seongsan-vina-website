@@ -92,3 +92,9 @@ Biểu mẫu Tài liệu hiện là luồng mở bản nháp email, khác form L
 Đã dịch đầy đủ phần thân bài, danh mục năm việc cần làm, CTA tải tài liệu và nhãn nguồn sang EN/KO/ZH; phần giải thích phạm vi ba thủ tục và hai mốc thời gian cũng được dịch. Bỏ thông báo giữ nguyên thân bài tiếng Việt trên ba bản dịch này. Giữ mã văn bản, số liệu, liên kết nguồn và nội dung tiếng Việt hiện có.
 
 Kiểm tra độ phủ tất cả đoạn ngoài dictionary cũ, mã văn bản/số liệu và đối chiếu danh sách URL nguồn đều đạt. Lint, build 52 trang, kiểm tra metadata/liên kết/JS, router và yêu cầu tài liệu đạt. Đây là xác nhận triển khai bản dịch, không mở rộng kết luận kiểm toán pháp lý ở mục trước. Nội dung trang Kiến thức và Thư viện tiêu chuẩn vẫn chưa dịch hết.
+
+## Thư viện tiêu chuẩn — hoàn thiện bản dịch
+
+Đã dịch toàn bộ mô tả danh mục thuộc bốn lĩnh vực, nhãn trạng thái, nút tải/tra cứu, nguồn và ghi chú sang EN/KO/ZH. Mã văn bản, URL tải và mốc rà soát danh mục 07/2026 được giữ nguyên. Nhãn Nghị quyết 66.18 được sửa đồng bộ thành ba thủ tục hành chính trong lĩnh vực PCCC, phù hợp phần giải thích đã đối chiếu ở bài phân tích.
+
+Đối chiếu tất cả đoạn văn không có data-i18n, mã tiêu chuẩn và danh sách URL nguồn đạt; lint, build 52 trang, kiểm tra cấu trúc/liên kết, router và yêu cầu tài liệu đạt. Dịch danh mục không chứng minh hiệu lực hiện hành hoặc nội dung mọi tiêu chuẩn được dẫn. Trang Kiến thức còn phần chưa dịch; tên riêng người và địa danh được giữ theo nguồn.
