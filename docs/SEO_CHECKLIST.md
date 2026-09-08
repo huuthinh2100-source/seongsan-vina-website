@@ -5,7 +5,7 @@
 | Repo public + CI | ✅ GitHub huuthinh2100-source/seongsan-vina-website; CI validate đạt |
 | Bảo vệ main | ✅ bắt buộc validate, chặn force push/xóa; admin vẫn được bypass |
 | 13 trang × 4 ngôn ngữ | ✅ 52 HTML, URL riêng, canonical/hreflang/x-default; check-build đạt; HTTP 52/52 đạt 200 |
-| Dịch nội dung đầy đủ | ✅ thân bài case study, tài liệu, hai bài pháp lý, thư viện và kiến thức đã bổ sung EN/KO/ZH; độ phủ được kiểm tra từng trang; ⏳ rà soát hiển thị tổng thể sau dịch |
+| Dịch nội dung đầy đủ | ✅ thân bài case study, tài liệu, hai bài pháp lý, thư viện và kiến thức đã bổ sung EN/KO/ZH; độ phủ được kiểm tra từng trang; ✅ 156 tổ hợp trang/ngôn ngữ/kích thước production có H1 và không tràn ngang; chưa có biên tập viên bản ngữ nghiệm thu |
 | Title/description | ✅ riêng từng trang/ngôn ngữ, giới hạn 60/155 |
 | H1/alt/link nội bộ | ✅ kiểm tra source và build đạt |
 | JSON-LD | ✅ Organization/LocalBusiness/WebSite/BreadcrumbList, parse hợp lệ; ✅ Google Rich Results Test phát hiện 2 mục hợp lệ; cảnh báo tùy chọn image/priceRange chưa có |

@@ -120,3 +120,11 @@ DNS kiểm tra lại vẫn là 36.50.55.80. Việc bổ sung schema không giả
 Phát hiện hai lỗi ở EN/360 px: nhóm nút tải vượt mép thẻ Thư viện do flex không xuống dòng; cột FAQ trang Kiến thức rộng hơn vùng nội dung khoảng 4 px do kích thước tối thiểu của grid. Đã cho nhóm nút co giãn/xuống dòng, giữ chiều cao chạm tối thiểu 44 px, cho cột co về đúng chiều rộng và ngắt chuỗi dài khi cần.
 
 Kiểm tra trình duyệt local trên 24 tổ hợp: hai trang × EN/KO/ZH × 360/768/1024/1440 px, không còn document overflow hoặc nút vượt thẻ. Mở FAQ FM-200 ở EN/360 px: câu trả lời hiển thị và không tràn ngang. Ảnh và số đo lưu trong `docs/screenshots/i18n/`; phạm vi này không thay cho kiểm tra mọi trang/ngôn ngữ. Lint/build/check-build đạt.
+
+## Kiểm tra toàn bộ bố cục sau dịch trên production — 08/09/2026
+
+Đã mở 13 trang × EN/KO/ZH × 360/768/1024/1440 px trên https://seongsan-vina-website.vercel.app, tổng cộng 156 trường hợp. Tất cả có H1 và `documentElement.scrollWidth` không vượt `clientWidth`. Số đo từng lần mở lưu trong 12 tệp `docs/screenshots/i18n/full-{lang}-{width}.json`. Lượt chạy lớn ban đầu hết thời gian trước khi lưu nên không được tính; kết quả báo cáo là các nhóm chạy lại đã ghi tệp thành công.
+
+Bảng nhân sự trang Năng lực ở EN/360 px rộng 640 px, nằm trong vùng rộng 303 px với `overflow-x: auto`; tài liệu vẫn rộng 345 px và không tràn ngang. Đây là vùng cuộn bảng có chủ đích. Kết quả này xác nhận kích thước trang và sự hiện diện tiêu đề, không thay cho đọc duyệt bản dịch bởi người bản ngữ hoặc kiểm tra mọi tương tác. Các đoạn báo cáo tiến độ trước đây nói Thư viện/Kiến thức chưa dịch đã được thay thế bởi kết quả hoàn thiện ở các mục sau.
+
+GO cho bản website trên URL Vercel trong phạm vi chức năng đã kiểm chứng. Chưa thể kết luận hoàn tất tên miền riêng, email thông báo, Analytics/Speed Insights hay thứ hạng Google: các phụ thuộc được ghi trong SEO_CHECKLIST.md vẫn còn. Lượt này chỉ bổ sung bằng chứng và cập nhật báo cáo, không thay đổi mã ứng dụng.
