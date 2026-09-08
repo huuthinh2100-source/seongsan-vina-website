@@ -1,0 +1,1 @@
+{"name":"seongsan-vina-website","version":"1.0.0","private":true,"engines":{"node":">=22"},"scripts":{"build":"node scripts/build.js","lint":"node scripts/check.js","media:check":"node --check scripts/optimize-media.js","media:optimize":"node scripts/optimize-media.js"},"devDependencies":{"sharp":"0.35.4","cheerio":"1.1.2"}}
