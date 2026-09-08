@@ -1,0 +1,11 @@
+const assert = require('node:assert/strict');
+const compose = require('../website/assets/document-request');
+const fields={name:'A & B #1',company:'Công ty + Đối tác',phone:'0123456789',email:'qa@example.com',service:'Mẫu tính lưu lượng & bể nước',msg:'Dòng 1\nDòng 2 &bcc=unexpected@example.com'};
+const url=new URL(compose(fields));
+assert.equal(url.pathname,'seongsantm@gmail.com');
+assert.deepEqual([...url.searchParams.keys()],['subject','body']);
+assert.equal(url.searchParams.get('subject'),'[Website] Yêu cầu tài liệu - A & B #1');
+const body=url.searchParams.get('body');
+for(const value of Object.values(fields))assert.ok(body.includes(value));
+assert.equal(url.hash,'');
+console.log('PASS: document request preserves Unicode and special characters without creating extra mail headers.');

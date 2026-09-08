@@ -20,3 +20,4 @@ jobs:
       - run: npm run build
       - run: npm run check:build
       - run: node scripts/test-language-router.js
+      - run: node scripts/test-document-request.js

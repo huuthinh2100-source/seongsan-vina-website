@@ -62,3 +62,9 @@ Build hiện xóa riêng dist sau khi kiểm tra đường dẫn để không gi
 ## Bổ sung ngôn ngữ cho media
 
 Đã dịch 25 mô tả ảnh hiện có cùng nhãn mở ảnh, menu, video và bản đồ sang EN/KO/ZH. Giữ nguyên nghĩa, giữ nhãn minh họa ở các ảnh được gắn nhãn đó trong nguồn. Kiểm tra đầu ra không còn alt ảnh tiếng Việt trên 39 trang ngoại ngữ. Đây chưa phải xác nhận đã dịch toàn bộ thân bài.
+
+## Trang Tài liệu — bổ sung bản dịch và sửa yêu cầu email
+
+Đã dịch phần giới thiệu, danh mục 7 nhóm tài liệu, biểu mẫu và placeholder của trang Tài liệu sang EN/KO/ZH. Giữ 8 giá trị option tiếng Việt làm dữ liệu gửi, giữ mã văn bản/tiêu chuẩn trong nguồn; bản dịch không xác nhận hiệu lực pháp lý hiện hành của các tham chiếu cũ.
+
+Biểu mẫu Tài liệu hiện là luồng mở bản nháp email, khác form Liên hệ lưu Supabase. Đã sửa tiêu đề nhầm báo giá thành yêu cầu tài liệu, mã hóa toàn bộ Unicode/ký tự đặc biệt trong subject/body, thêm hướng dẫn gửi bản nháp và link mở lại. Chưa xác nhận email đã gửi hay tài liệu đã được giao tự động. Test ký tự &, #, dấu tiếng Việt và chuỗi giống header email đạt; source lint/build/52 trang đạt.

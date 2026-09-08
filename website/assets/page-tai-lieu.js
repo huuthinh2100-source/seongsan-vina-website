@@ -45,7 +45,13 @@ var I18N = {"en":{"c.top.addr":"23 Thi Dua St., Tien Cat Ward, Viet Tri City, Ph
   if(form){form.addEventListener('submit',function(e){
     e.preventDefault();
     var g=function(n){var el=form.querySelector('[name='+n+']');return el?el.value:'';};
-    var body='Ho ten: '+g('name')+'%0D%0ACong ty: '+g('company')+'%0D%0ADien thoai: '+g('phone')+'%0D%0AEmail: '+g('email')+'%0D%0ADich vu: '+g('service')+'%0D%0ANoi dung: '+encodeURIComponent(g('msg'));
-    location.href='mailto:seongsantm@gmail.com?subject='+encodeURIComponent('[Website] Yeu cau bao gia - '+g('name'))+'&body='+body;
+    var mailto=window.composeDocumentRequest({name:g('name'),company:g('company'),phone:g('phone'),email:g('email'),service:g('service'),msg:g('msg')});
+    var language=document.documentElement.lang.split('-')[0];
+    var messages={vi:['Hãy gửi bản nháp trong ứng dụng email để hoàn tất yêu cầu. Nếu ứng dụng chưa mở, dùng liên kết bên dưới.','Mở bản nháp email'],en:['Send the draft in your email app to complete your request. If the app has not opened, use the link below.','Open email draft'],ko:['이메일 앱에서 초안을 전송하여 요청을 완료하세요. 앱이 열리지 않으면 아래 링크를 이용하세요.','이메일 초안 열기'],zh:['请在邮件应用中发送草稿以完成申请。如果应用尚未打开，请使用下方链接。','打开邮件草稿']};
+    var words=messages[language]||messages.vi;
+    var status=document.getElementById('document-request-status');
+    if(!status){status=document.createElement('div');status.id='document-request-status';status.setAttribute('role','status');form.appendChild(status);}
+    status.textContent=words[0]+' ';var link=document.createElement('a');link.href=mailto;link.textContent=words[1];status.appendChild(link);
+    location.href=mailto;
   });}
 })();
