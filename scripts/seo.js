@@ -27,7 +27,7 @@ module.exports=function(dest){
   const tags={'og:type':'website','og:site_name':'Seongsan Vina','og:title':title,'og:description':description,'og:url':url,'og:locale':'vi_VN','og:image':base+'/assets/og-seongsan.jpg','og:image:width':'1200','og:image:height':'630','og:image:alt':'Minh họa lĩnh vực công nghiệp Seongsan Vina'};
   for(const [property,content] of Object.entries(tags))head.append($('<meta>').attr({property,content}));
   for(const [name,content] of Object.entries({'twitter:card':'summary_large_image','twitter:title':title,'twitter:description':description,'twitter:image':base+'/assets/og-seongsan.jpg'}))head.append($('<meta>').attr({name,content}));
-  head.append('<link rel="manifest" href="/site.webmanifest">');$('link[rel="icon"]').attr('type','image/webp');
+  head.append('<link rel="manifest" href="/site.webmanifest"><link rel="apple-touch-icon" sizes="180x180" href="/assets/icon-180.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">');$('link[rel="icon"][href$=".webp"]').attr('type','image/webp');
   const graph=[org,{'@type':'WebSite','@id':base+'/#website',url:base,name:'Seongsan Vina',inLanguage:'vi',publisher:{'@id':org['@id']}}];
   if(slug!=='index')graph.push({'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Trang chủ',item:base+'/'},{'@type':'ListItem',position:2,name:title.split(' | ')[0],item:url}]});
   head.append('<script type="application/ld+json">'+JSON.stringify({'@context':'https://schema.org','@graph':graph}).replace(/</g,'\\u003c')+'</script>');
@@ -35,7 +35,7 @@ module.exports=function(dest){
  }
  fs.writeFileSync(path.join(dest,'robots.txt'),'User-agent: *\nAllow: /\nSitemap: '+base+'/sitemap.xml\n');
  fs.writeFileSync(path.join(dest,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+Object.keys(pages).map(s=>'<url><loc>'+base+(s==='index'?'/':'/'+s)+'</loc></url>').join('')+'</urlset>');
- fs.writeFileSync(path.join(dest,'site.webmanifest'),JSON.stringify({name:'Seongsan Vina',short_name:'Seongsan',lang:'vi',start_url:'/',display:'browser',background_color:'#ffffff',theme_color:'#1A2B55'}));
+ fs.writeFileSync(path.join(dest,'site.webmanifest'),JSON.stringify({name:'Seongsan Vina',short_name:'Seongsan',lang:'vi',start_url:'/',display:'browser',background_color:'#ffffff',theme_color:'#1A2B55',icons:[192,512].map(n=>({src:'/assets/icon-'+n+'.png',sizes:n+'x'+n,type:'image/png'}))}));
  fs.writeFileSync(path.join(dest,'404.html'),'<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Không tìm thấy trang | Seongsan Vina</title><main style="font-family:system-ui;max-width:640px;margin:15vh auto;padding:24px;color:#1a2b55"><p>SEONGSAN VINA · 404</p><h1>Không tìm thấy trang</h1><p>Đường dẫn có thể đã thay đổi. Hãy trở về trang chủ hoặc liên hệ để được hỗ trợ.</p><a href="/">Về trang chủ</a> · <a href="/lien-he">Liên hệ</a></main></html>');
  console.log('SEO: 13 unique titles/descriptions, canonical, social cards, JSON-LD, sitemap and 404.');
 };

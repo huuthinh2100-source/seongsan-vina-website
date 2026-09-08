@@ -4,7 +4,7 @@ Website giới thiệu Công ty Cổ phần Seongsan Vina: PCCC, Xây dựng và
 
 ## Chạy local
 
-Node 24 và npm. `npm ci`, sao chép `.env.example` thành `.env.local`, sau đó `npm run lint` và `npm run build`. Xem bản build bằng `python -m http.server 8080 --directory dist`.
+Node 24 và npm. `npm ci`, sao chép `.env.example` thành `.env.local`, sau đó `npm run lint` và `npm run build`. Xem bản build bằng `python scripts/preview.py`.
 
 ## Cấu trúc và cấu hình
 
@@ -20,3 +20,7 @@ Node 24 và npm. `npm ci`, sao chép `.env.example` thành `.env.local`, sau đ�
 Vercel dùng `vercel.json`: build `npm run build`, output `dist`. Cấu hình env riêng trên Preview/Production rồi deploy preview, kiểm tra và promote production. Cần kiểm thử form thật, DNS/HTTPS và indexing trên môi trường đích.
 
 Ảnh/video AI luôn là minh họa. Thư mục này không chứa hồ sơ pháp lý công ty hoặc bản sao lưu workspace. Các PDF đang có trong `tai-lieu-vb` là văn bản quy phạm dùng làm tài liệu tham khảo, không phải hồ sơ nội bộ.
+
+## Bàn giao
+
+Website: https://seongsan-vina-website.vercel.app. Xem [báo cáo bàn giao](docs/FINAL_REPORT.md) và [SEO checklist](docs/SEO_CHECKLIST.md) để phân biệt phần đã kiểm thử với DNS/email/Google còn chờ chủ tài khoản.

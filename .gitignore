@@ -6,4 +6,4 @@ dist/
 .next/
 *.zip
 public/media/optimized/
-
+supabase/.temp/

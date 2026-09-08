@@ -4,6 +4,9 @@
   "installCommand": "npm ci",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {"source":"/:path*","has":[{"type":"host","value":"www.seongsanvina.com"}],"destination":"https://seongsanvina.com/:path*","permanent":true}
+  ],
   "headers": [
     {"source":"/(.*)","headers":[
       {"key":"X-Content-Type-Options","value":"nosniff"},
