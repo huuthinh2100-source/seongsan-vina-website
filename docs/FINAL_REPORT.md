@@ -80,3 +80,9 @@ Biểu mẫu Tài liệu hiện là luồng mở bản nháp email, khác form L
 Đã bổ sung bản dịch toàn bộ thân bài, thông tin tác giả/ngày cập nhật, CTA và nhãn nguồn. Giữ nguyên nội dung nguồn tiếng Việt, mốc cập nhật tháng 7/2026, mã văn bản và URL tài liệu. Kiểm tra độ phủ các đoạn ngoài dictionary cũ đạt; build 52 trang, lint, router và luồng yêu cầu tài liệu đạt.
 
 Đối chiếu riêng hai mốc hiệu lực: [Thông tư 06/2022/TT-BXD](https://vanban.chinhphu.vn/?classid=1&docid=207059&pageid=27160&typegroupid=6) ghi 16/01/2023; [Thông tư 09/2023/TT-BXD](https://congbao.chinhphu.vn/van-ban/thong-tu-so-09-2023-tt-bxd-40285.htm) ghi 01/12/2023. Đối chiếu này không phải kiểm toán toàn bộ nội dung pháp lý của bài hoặc xác nhận mọi tham chiếu còn hiệu lực tại ngày đọc. Trang kiến thức, bài Nghị định 105 và thư viện còn phần nội dung chưa dịch.
+
+## Bài Nghị định 105 — làm rõ phạm vi thủ tục và mốc thời gian
+
+Đọc trực tiếp trang 3 Phụ lục I.1 của Nghị quyết 66.18/2026/NQ-CP được Báo Chính phủ cung cấp: phần C, Mục 2 liệt kê ba thủ tục không thực hiện. Đã sửa cách viết dễ hiểu thành bỏ toàn bộ nghiệm thu; tách mốc hiệu lực 01/7/2026 của Nghị quyết với mốc dừng tiếp nhận 20/6/2026 trong thông báo Công an Tuyên Quang. Link nguồn chính thức được đặt ngay trong bài.
+
+Đã bỏ kết luận áp dụng chung rằng mọi hồ sơ tiếp nhận trước 20/6/2026 tiếp tục xử lý theo quy định cũ. Nguồn hiện có chưa đủ để kết luận cho mọi địa phương/tình trạng hồ sơ; bài hướng người đọc đối chiếu cơ quan đang giải quyết. Đây là sửa nội dung có rủi ro hiểu sai, chưa phải kiểm toán pháp lý toàn bài. Bản dịch đầy đủ bài Nghị định 105 còn đang thực hiện.
