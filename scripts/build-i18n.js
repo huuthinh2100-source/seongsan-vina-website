@@ -19,6 +19,7 @@ module.exports=function(dest){
    if(lang!=='vi'){
     const languageIndex=['en','ko','zh'].indexOf(lang);
     const translate=value=>mediaTranslations[value]?.[languageIndex]||value;
+    $('figcaption').each((_,e)=>{const n=$(e),value=n.text();if(mediaTranslations[value])n.text(translate(value));});
     $('[alt],[aria-label],[title]').each((_,e)=>{const n=$(e);for(const attribute of ['alt','aria-label','title']){const value=n.attr(attribute);if(!value)continue;const prefix='Xem ảnh lớn: ';n.attr(attribute,value.startsWith(prefix)?['View larger image: ','이미지 확대: ','查看大图：'][languageIndex]+translate(value.slice(prefix.length)):translate(value));}});
     $('meta[property="og:image:alt"]').attr('content',translate($('meta[property="og:image:alt"]').attr('content')));
     $('[data-i18n]').each((_,e)=>{let n=$(e),v=dict[lang]?.[n.attr('data-i18n')]||dict.en?.[n.attr('data-i18n')];if(v)n.html(v);});
