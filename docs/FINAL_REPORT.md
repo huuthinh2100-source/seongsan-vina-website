@@ -68,3 +68,9 @@ Build hiện xóa riêng dist sau khi kiểm tra đường dẫn để không gi
 Đã dịch phần giới thiệu, danh mục 7 nhóm tài liệu, biểu mẫu và placeholder của trang Tài liệu sang EN/KO/ZH. Giữ 8 giá trị option tiếng Việt làm dữ liệu gửi, giữ mã văn bản/tiêu chuẩn trong nguồn; bản dịch không xác nhận hiệu lực pháp lý hiện hành của các tham chiếu cũ.
 
 Biểu mẫu Tài liệu hiện là luồng mở bản nháp email, khác form Liên hệ lưu Supabase. Đã sửa tiêu đề nhầm báo giá thành yêu cầu tài liệu, mã hóa toàn bộ Unicode/ký tự đặc biệt trong subject/body, thêm hướng dẫn gửi bản nháp và link mở lại. Chưa xác nhận email đã gửi hay tài liệu đã được giao tự động. Test ký tự &, #, dấu tiếng Việt và chuỗi giống header email đạt; source lint/build/52 trang đạt.
+
+## Case study — bản dịch nội dung đầy đủ
+
+Đã dịch tám phần nội dung, tiêu đề, bảng thông tin dự án và CTA của case study sang EN/KO/ZH. Kiểm tra không còn đoạn thân bài chưa có bản dịch; giữ nguyên số liệu, tên Fabinno Vina, mã tiêu chuẩn và nhãn ảnh minh họa. Nội dung tiếng Việt được giữ nguyên (chỉ khác khoảng trắng cuối file). Bản dịch phản ánh nội dung nguồn, không phải bằng chứng độc lập xác minh kết quả dự án hoặc hiệu lực các tham chiếu pháp lý cũ.
+
+Đã bỏ biểu tượng phát ở ô video nghiệm thu chưa có file phát. Chưa có video nghiệm thu thực tế để giao. Lint, build 52 trang, kiểm tra liên kết/metadata/JS, kiểm thử router và yêu cầu tài liệu đều đạt. Các bài pháp lý và thư viện vẫn còn phần nội dung tiếng Việt cần xử lý tiếp.
