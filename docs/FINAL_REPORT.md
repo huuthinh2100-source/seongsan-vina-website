@@ -98,3 +98,11 @@ Kiểm tra độ phủ tất cả đoạn ngoài dictionary cũ, mã văn bản/
 Đã dịch toàn bộ mô tả danh mục thuộc bốn lĩnh vực, nhãn trạng thái, nút tải/tra cứu, nguồn và ghi chú sang EN/KO/ZH. Mã văn bản, URL tải và mốc rà soát danh mục 07/2026 được giữ nguyên. Nhãn Nghị quyết 66.18 được sửa đồng bộ thành ba thủ tục hành chính trong lĩnh vực PCCC, phù hợp phần giải thích đã đối chiếu ở bài phân tích.
 
 Đối chiếu tất cả đoạn văn không có data-i18n, mã tiêu chuẩn và danh sách URL nguồn đạt; lint, build 52 trang, kiểm tra cấu trúc/liên kết, router và yêu cầu tài liệu đạt. Dịch danh mục không chứng minh hiệu lực hiện hành hoặc nội dung mọi tiêu chuẩn được dẫn. Trang Kiến thức còn phần chưa dịch; tên riêng người và địa danh được giữ theo nguồn.
+
+## Trang Kiến thức — hoàn thiện bản dịch và sửa FAQ FM-200
+
+Đã dịch các thẻ tin, mô tả dự án, danh mục bài/video/công nghệ/ngành, câu hỏi và câu trả lời FAQ sang EN/KO/ZH. Kiểm tra độ phủ toàn bộ đoạn thân bài ngoài dictionary cũ đạt; URL nguồn giữ nguyên, bổ sung nguồn FM-200. Nhãn Nghị quyết 66.18 đồng bộ thành ba thủ tục hành chính PCCC.
+
+FAQ FM-200 được sửa vì câu cũ dùng mức 7–9% và trễ 30 giây như một bảo đảm an toàn chung. Bản mới nêu nồng độ, thời gian phơi nhiễm và điều kiện sử dụng; hướng tới SDS, hướng dẫn nhà sản xuất và thiết kế được phê duyệt. [Tài liệu Chemours](https://www.chemours.de/-/media/files/fire-extinguishants/fm-200-push-bulletin.pdf?rev=29223f52b4664637ab349e8a7fa6f92e) yêu cầu hiểu SDS, tuân thủ giới hạn phơi nhiễm và cảnh báo nguy cơ khi hít ở nồng độ cao. Không thêm thông số thiết kế chung cho mọi phòng.
+
+Lint, build 52 trang, check-build, router và yêu cầu tài liệu đạt. Hoàn thiện bản dịch không chứng minh hiệu lực mọi tham chiếu hoặc độ phù hợp của các ví dụ tính toán trong FAQ cho từng công trình; phần rà soát nội dung kỹ thuật tổng thể vẫn cần tiếp tục.
