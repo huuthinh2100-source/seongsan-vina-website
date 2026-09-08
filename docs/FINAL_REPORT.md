@@ -40,9 +40,17 @@ Accessibility/Best Practices/SEO trong báo cáo local cuối đạt 100. Lighth
 
 1. DNS: domain đã thêm vào Vercel; A record vẫn ở máy chủ cũ 36.50.55.80. Đổi record theo DOMAIN_AND_SEARCH_CONSOLE.md, kiểm tra HTTPS rồi đổi SITE_URL/redeploy.
 2. Email: cấu hình RESEND_API_KEY và SEONGSAN_MAIL_FROM qua Supabase Secrets; kiểm thử nhận thư. Không gửi secret qua repo/chat.
-3. Google: xác minh Search Console bằng TXT/meta thật, gửi sitemap và yêu cầu index; xác minh GBP bằng dữ liệu doanh nghiệp đúng hiện hành.
+3. Google: URL-prefix Vercel đã xác minh bằng meta thật; sitemap Thành công, 52 URL được khám phá. Domain property riêng còn cần TXT DNS; GBP cần chủ doanh nghiệp xác minh.
 4. Vercel Analytics/Speed Insights: CLI yêu cầu chính chủ xác nhận trong terminal. Speed Insights được CLI báo có phí, nên chưa bật và chưa tính là hoàn thành.
 
 Lệnh do chủ tài khoản thực hiện nếu muốn bật: `vercel project web-analytics enable seongsan-vina-website`; `vercel project speed-insights enable seongsan-vina-website` (đọc và chấp nhận phí nếu phù hợp). Yêu cầu tương tác này đến từ Vercel CLI, không phải bước xin duyệt do agent tự thêm.
 
 SEO_KEYWORDS.md, SEO_CHECKLIST.md, GBP_CONTENT.md, OFFPAGE_CHECKLIST.md và CONTENT_PLAN.md cung cấp mapping, checklist và 8 đề cương. Theo dõi Search Console ngày 7/30/90 sau xác minh; chưa có automation được tạo và chưa có bằng chứng thứ hạng.
+
+## Kiểm tra Google bổ sung
+
+Rich Results Test ngày 08/09/2026 thu thập thành công, phát hiện 2 mục hợp lệ (Organization, LocalBusiness). Có cảnh báo không bắt buộc về image/priceRange; không tự thêm giá hoặc ảnh cơ sở chưa được xác thực. [Kết quả Google](https://search.google.com/test/rich-results/result?id=Sc-6jFUOU2gBjfWhEsUrGg).
+
+Search Console URL-prefix đã xác minh bằng thẻ HTML ngày 08/09/2026; sitemap.xml gửi thành công, Google đọc thành công và khám phá 52 trang. Khám phá URL không đồng nghĩa đã index.
+
+Yêu cầu lập chỉ mục trang chủ đã được Google chấp nhận và đưa vào hàng đợi. Yêu cầu tiếp theo cho /dich-vu-pccc bị Google từ chối do vượt hạn ngạch ngày; cần thử lại ngày mai cho PCCC, giới thiệu, năng lực, liên hệ. Không gửi lặp để vượt quota. Xem google-checks.json.

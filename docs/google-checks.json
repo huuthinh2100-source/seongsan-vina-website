@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-08",
+  "property": "https://seongsan-vina-website.vercel.app/",
+  "ownership": "verified HTML meta",
+  "sitemapStatus": "Success",
+  "discoveredUrls": 52,
+  "richResultsValidItems": 2,
+  "richResultsUrl": "https://search.google.com/test/rich-results/result?id=Sc-6jFUOU2gBjfWhEsUrGg",
+  "indexRequestsAccepted": [
+    "/"
+  ],
+  "indexingConfirmed": false,
+  "indexRequestBlocked": {
+    "url": "/dich-vu-pccc",
+    "reason": "Google daily quota exceeded; retry tomorrow"
+  },
+  "remainingIndexRequests": [
+    "/dich-vu-pccc",
+    "/gioi-thieu",
+    "/nang-luc",
+    "/lien-he"
+  ]
+}

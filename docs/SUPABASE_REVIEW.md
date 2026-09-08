@@ -27,3 +27,7 @@ Turnstile chưa bật. Honeypot, giới hạn payload/độ dài và rate limit 
 - Performance: chỉ có INFO unused indexes ở các bảng CRM dùng chung. Không xóa index chỉ vì chưa có truy vấn sử dụng trong thống kê hiện tại.
 
 Tham chiếu: [RLS không policy](https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy), [SECURITY DEFINER](https://supabase.com/docs/guides/database/database-linter?lint=0029_authenticated_security_definer_function_executable), [bảo vệ mật khẩu](https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection).
+
+## Kiểm thử trình duyệt production sau sửa CORS
+
+Đã bỏ header Prefer không được CORS cho phép. Preflight OPTIONS trả 204 với apikey/authorization/content-type. Form production gửi yêu cầu giả ngày 08/09/2026; đọc lại DB thấy đúng site Seongsan và trạng thái Mới; form reset và console không có lỗi. Bản ghi QA đã xóa bằng ID/tên khớp, outbox cascade. Không dùng kết quả API trực tiếp thay thế bằng chứng trình duyệt.
