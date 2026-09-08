@@ -7,6 +7,13 @@ for(const lang of ['','en','ko','zh'])for(const file of fs.readdirSync(path.join
  if($('h1').length!==1||$('link[hreflang]').length!==5)errors.push(id+': H1/hreflang');
  if($('title').text().length>60||$('meta[name=description]').attr('content').length>155)errors.push(id+': metadata length');
  $('script[type="application/ld+json"]').each((_,e)=>JSON.parse($(e).text()));
+ const faq=$('details.faq'),schema=$('#faq-schema');
+ if(faq.length){
+  if(schema.length!==1)errors.push(id+': missing/duplicate FAQ schema');
+  else {const data=JSON.parse(schema.text());if(data['@type']!=='FAQPage'||data.url!==canonical||data.inLanguage!==$('html').attr('lang')||data.mainEntity?.length!==faq.length)errors.push(id+': FAQ metadata/count mismatch');
+   faq.each((i,e)=>{const question=$(e).children('summary').text().trim(),answer=$(e).clone();answer.children('summary').remove();const entry=data.mainEntity?.[i];if(entry?.['@type']!=='Question'||entry.name!==question||entry.acceptedAnswer?.['@type']!=='Answer'||entry.acceptedAnswer.text!==answer.text().trim())errors.push(id+': FAQ differs from visible content at '+i);});
+  }
+ }else if(schema.length)errors.push(id+': FAQ schema without visible questions');
  $('[src],[href],[srcset],[data-src],[poster],[data-full],[data-poster]').each((_,e)=>{const n=$(e),refs=['src','href','data-src','poster','data-full','data-poster'].map(a=>n.attr(a)).filter(Boolean);if(n.attr('srcset'))refs.push(...n.attr('srcset').split(',').map(x=>x.trim().split(/\s+/)[0]));for(const ref of refs){if(/^(?:[a-z]+:|\/\/|#)/i.test(ref))continue;const v=ref.split(/[?#]/)[0];let target=path.join(root,v);if(!fs.existsSync(target)&&!fs.existsSync(target+'.html'))errors.push(id+': missing '+ref);}});
 }
 for(const file of fs.readdirSync(path.join(root,'assets')).filter(f=>f.endsWith('.js')))new vm.Script(fs.readFileSync(path.join(root,'assets',file),'utf8'));

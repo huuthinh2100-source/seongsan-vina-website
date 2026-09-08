@@ -47,6 +47,8 @@ module.exports=function(dest){
     }
     if(n.attr('srcset'))n.attr('srcset',n.attr('srcset').split(',').map(x=>{let v=x.trim();return v.startsWith('/')?v:'/'+v;}).join(', '));
    });
+   const questions=$('details.faq').map((_,element)=>{const node=$(element),answer=node.clone();answer.children('summary').remove();return {'@type':'Question',name:node.children('summary').text().trim(),acceptedAnswer:{'@type':'Answer',text:answer.text().trim()}};}).get();
+   if(questions.length)$('head').append($('<script>').attr({type:'application/ld+json',id:'faq-schema'}).text(JSON.stringify({'@context':'https://schema.org','@type':'FAQPage','@id':url+'#faq',url,inLanguage:lang==='zh'?'zh-Hans':lang,mainEntity:questions}).replace(/</g,'\\u003c')));
    $('head').prepend('<script defer src="/assets/language-router.js"></script>');
    const out=path.join(dest,lang==='vi'?'':lang,slug+'.html');fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out,$.html());
   }

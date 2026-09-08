@@ -106,3 +106,11 @@ Kiểm tra độ phủ tất cả đoạn ngoài dictionary cũ, mã văn bản/
 FAQ FM-200 được sửa vì câu cũ dùng mức 7–9% và trễ 30 giây như một bảo đảm an toàn chung. Bản mới nêu nồng độ, thời gian phơi nhiễm và điều kiện sử dụng; hướng tới SDS, hướng dẫn nhà sản xuất và thiết kế được phê duyệt. [Tài liệu Chemours](https://www.chemours.de/-/media/files/fire-extinguishants/fm-200-push-bulletin.pdf?rev=29223f52b4664637ab349e8a7fa6f92e) yêu cầu hiểu SDS, tuân thủ giới hạn phơi nhiễm và cảnh báo nguy cơ khi hít ở nồng độ cao. Không thêm thông số thiết kế chung cho mọi phòng.
 
 Lint, build 52 trang, check-build, router và yêu cầu tài liệu đạt. Hoàn thiện bản dịch không chứng minh hiệu lực mọi tham chiếu hoặc độ phù hợp của các ví dụ tính toán trong FAQ cho từng công trình; phần rà soát nội dung kỹ thuật tổng thể vẫn cần tiếp tục.
+
+## Đối chiếu yêu cầu gốc — FAQ schema
+
+Đã bổ sung FAQPage từ năm câu hỏi/đáp thực sự hiển thị trên trang Kiến thức, sau bước dịch. Mỗi bản VI/EN/KO/ZH có URL, inLanguage và nội dung tương ứng. Không thêm câu trả lời ẩn hoặc FAQ vào trang không có hỏi đáp. Check-build đối chiếu schema với nội dung trang; thử làm lệch một câu trả lời trong dist khiến kiểm tra thất bại như mong đợi, rồi khôi phục bản đúng.
+
+[Google Search Central](https://developers.google.com/search/updates) thông báo FAQ rich results ngừng xuất hiện từ 07/05/2026 và gỡ tài liệu vào 15/06/2026. FAQPage vẫn là kiểu dữ liệu [Schema.org](https://schema.org/FAQPage), nhưng không được báo cáo là đã có FAQ rich result hoặc yêu cầu Rich Results Test công nhận kiểu đã ngừng hỗ trợ.
+
+DNS kiểm tra lại vẫn là 36.50.55.80. Việc bổ sung schema không giải quyết phần tên miền, cấu hình email hoặc xác nhận dịch vụ Vercel còn thiếu. Lint/build/check-build/router/document-request đạt.

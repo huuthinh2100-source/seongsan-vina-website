@@ -5,10 +5,11 @@
 | Repo public + CI | ✅ GitHub huuthinh2100-source/seongsan-vina-website; CI validate đạt |
 | Bảo vệ main | ✅ bắt buộc validate, chặn force push/xóa; admin vẫn được bypass |
 | 13 trang × 4 ngôn ngữ | ✅ 52 HTML, URL riêng, canonical/hreflang/x-default; check-build đạt; HTTP 52/52 đạt 200 |
-| Dịch nội dung đầy đủ | ⏳ các dictionary hiện có đã xuất HTML; alt ảnh và nhãn media đã dịch EN/KO/ZH; một số thân bài vẫn giữ VI |
+| Dịch nội dung đầy đủ | ✅ thân bài case study, tài liệu, hai bài pháp lý, thư viện và kiến thức đã bổ sung EN/KO/ZH; độ phủ được kiểm tra từng trang; ⏳ rà soát hiển thị tổng thể sau dịch |
 | Title/description | ✅ riêng từng trang/ngôn ngữ, giới hạn 60/155 |
 | H1/alt/link nội bộ | ✅ kiểm tra source và build đạt |
 | JSON-LD | ✅ Organization/LocalBusiness/WebSite/BreadcrumbList, parse hợp lệ; ✅ Google Rich Results Test phát hiện 2 mục hợp lệ; cảnh báo tùy chọn image/priceRange chưa có |
+| FAQPage | ✅ sinh từ 5 câu hỏi/đáp hiển thị trên trang Kiến thức ở từng ngôn ngữ; check-build đối chiếu nội dung và URL/ngôn ngữ. Google đã ngừng FAQ rich results từ 07/05/2026; không dùng Rich Results Test làm tiêu chí cho loại này |
 | OG/Twitter | ✅ 1200×630, metadata riêng; dùng chung ảnh minh họa thương hiệu |
 | Sitemap/robots/404 | ✅ đã xuất bản; URL sai trả 404 |
 | Favicons/manifest | ✅ có source và bước build |
