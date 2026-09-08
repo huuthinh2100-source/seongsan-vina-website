@@ -86,3 +86,9 @@ Biểu mẫu Tài liệu hiện là luồng mở bản nháp email, khác form L
 Đọc trực tiếp trang 3 Phụ lục I.1 của Nghị quyết 66.18/2026/NQ-CP được Báo Chính phủ cung cấp: phần C, Mục 2 liệt kê ba thủ tục không thực hiện. Đã sửa cách viết dễ hiểu thành bỏ toàn bộ nghiệm thu; tách mốc hiệu lực 01/7/2026 của Nghị quyết với mốc dừng tiếp nhận 20/6/2026 trong thông báo Công an Tuyên Quang. Link nguồn chính thức được đặt ngay trong bài.
 
 Đã bỏ kết luận áp dụng chung rằng mọi hồ sơ tiếp nhận trước 20/6/2026 tiếp tục xử lý theo quy định cũ. Nguồn hiện có chưa đủ để kết luận cho mọi địa phương/tình trạng hồ sơ; bài hướng người đọc đối chiếu cơ quan đang giải quyết. Đây là sửa nội dung có rủi ro hiểu sai, chưa phải kiểm toán pháp lý toàn bài. Bản dịch đầy đủ bài Nghị định 105 còn đang thực hiện.
+
+## Bài Nghị định 105 — hoàn thiện bản dịch
+
+Đã dịch đầy đủ phần thân bài, danh mục năm việc cần làm, CTA tải tài liệu và nhãn nguồn sang EN/KO/ZH; phần giải thích phạm vi ba thủ tục và hai mốc thời gian cũng được dịch. Bỏ thông báo giữ nguyên thân bài tiếng Việt trên ba bản dịch này. Giữ mã văn bản, số liệu, liên kết nguồn và nội dung tiếng Việt hiện có.
+
+Kiểm tra độ phủ tất cả đoạn ngoài dictionary cũ, mã văn bản/số liệu và đối chiếu danh sách URL nguồn đều đạt. Lint, build 52 trang, kiểm tra metadata/liên kết/JS, router và yêu cầu tài liệu đạt. Đây là xác nhận triển khai bản dịch, không mở rộng kết luận kiểm toán pháp lý ở mục trước. Nội dung trang Kiến thức và Thư viện tiêu chuẩn vẫn chưa dịch hết.
