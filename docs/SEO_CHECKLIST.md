@@ -18,7 +18,7 @@
 | Domain riêng | ⏳ đã gắn domain; DNS vẫn trỏ máy chủ cũ, chủ DNS cần chuyển |
 | Analytics | ⏳ Vercel yêu cầu chính chủ xác nhận tương tác |
 | Speed Insights | ⏳ CLI cảnh báo tính phí; chưa bật |
-| Search Console/indexing | ✅ URL-prefix đã xác minh; sitemap Thành công, 52 URL được Google khám phá; ✅ request index trang chủ được nhận; ⏳ Google hết quota khi gửi PCCC, 4 trang còn lại chờ ngày mai |
+| Search Console/indexing | ✅ URL-prefix đã xác minh; sitemap ngày 08/09 có 52 URL; ✅ ngày 09/09 URL Inspection xác nhận trang chủ, giới thiệu, năng lực, liên hệ đã lập chỉ mục; ✅ yêu cầu PCCC được nhận vào hàng đợi; ⏳ chờ PCCC được lập chỉ mục, chưa chứng minh toàn bộ 52 URL hoặc thứ hạng |
 | Business Profile/off-page | ✅ bản nháp/checklist; ⏳ chủ doanh nghiệp xác minh và đăng |
 | Kế hoạch nội dung | ✅ 8 đề cương, chưa xuất bản bài chưa kiểm chứng |
 | Thứ hạng Google | ⏳ chưa có dữ liệu, không cam kết đứng đầu |

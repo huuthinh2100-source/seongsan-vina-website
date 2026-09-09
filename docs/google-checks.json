@@ -7,17 +7,29 @@
   "richResultsValidItems": 2,
   "richResultsUrl": "https://search.google.com/test/rich-results/result?id=Sc-6jFUOU2gBjfWhEsUrGg",
   "indexRequestsAccepted": [
-    "/"
+    "/",
+    "/dich-vu-pccc"
   ],
-  "indexingConfirmed": false,
-  "indexRequestBlocked": {
-    "url": "/dich-vu-pccc",
-    "reason": "Google daily quota exceeded; retry tomorrow"
-  },
-  "remainingIndexRequests": [
-    "/dich-vu-pccc",
+  "indexingConfirmed": true,
+  "indexRequestBlocked": null,
+  "remainingIndexRequests": [],
+  "followUpDate": "2026-09-09",
+  "indexedUrlsConfirmed": [
+    "/",
     "/gioi-thieu",
     "/nang-luc",
     "/lien-he"
-  ]
+  ],
+  "indexingScope": "Only the four listed URLs verified in Search Console URL Inspection; not all 52 URLs and not ranking.",
+  "pendingIndexing": [
+    "/dich-vu-pccc"
+  ],
+  "followUpEvidence": {
+    "method": "Authenticated Search Console UI URL Inspection",
+    "indexedMessage": "URL nằm trên Google; Trang đã lập chỉ mục",
+    "pcccRequestMessage": "Đã yêu cầu lập chỉ mục; URL đã được thêm vào hàng đợi ưu tiên thu thập dữ liệu",
+    "homepageVideo": "Chưa lập chỉ mục video nào",
+    "overview": "0 clicks; indexing report processing; no Core Web Vitals data",
+    "note": "No redundant request sent for the three already indexed secondary pages. Original sitemap and rich-results fields retain 2026-09-08 observation date."
+  }
 }

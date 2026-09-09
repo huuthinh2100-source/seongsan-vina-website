@@ -1,6 +1,6 @@
 # Bàn giao triển khai Seongsan Vina — 08/09/2026
 
-**Đã xuất bản website và repo public. GO cho website giới thiệu và tiếp nhận lead vào DB; chưa GO cho email tự động, chuyển domain riêng và xác nhận Google indexing.** Báo cáo này ghi cả phần chưa hoàn thành, không xác nhận hoàn thành toàn bộ mục tiêu.
+**Đã xuất bản website và repo public. GO cho website giới thiệu và tiếp nhận lead vào DB; chưa GO cho email tự động và chuyển domain riêng; Google indexing mới xác nhận bốn URL, chưa phải toàn bộ website.** Báo cáo này ghi cả phần chưa hoàn thành, không xác nhận hoàn thành toàn bộ mục tiêu.
 
 - Production: https://seongsan-vina-website.vercel.app
 - Repo public: https://github.com/huuthinh2100-source/seongsan-vina-website
@@ -128,3 +128,11 @@ Kiểm tra trình duyệt local trên 24 tổ hợp: hai trang × EN/KO/ZH × 36
 Bảng nhân sự trang Năng lực ở EN/360 px rộng 640 px, nằm trong vùng rộng 303 px với `overflow-x: auto`; tài liệu vẫn rộng 345 px và không tràn ngang. Đây là vùng cuộn bảng có chủ đích. Kết quả này xác nhận kích thước trang và sự hiện diện tiêu đề, không thay cho đọc duyệt bản dịch bởi người bản ngữ hoặc kiểm tra mọi tương tác. Các đoạn báo cáo tiến độ trước đây nói Thư viện/Kiến thức chưa dịch đã được thay thế bởi kết quả hoàn thiện ở các mục sau.
 
 GO cho bản website trên URL Vercel trong phạm vi chức năng đã kiểm chứng. Chưa thể kết luận hoàn tất tên miền riêng, email thông báo, Analytics/Speed Insights hay thứ hạng Google: các phụ thuộc được ghi trong SEO_CHECKLIST.md vẫn còn. Lượt này chỉ bổ sung bằng chứng và cập nhật báo cáo, không thay đổi mã ứng dụng.
+
+## Search Console — xác minh ngày 09/09/2026
+
+Đã kiểm tra trực tiếp từng URL bằng URL Inspection trong property Vercel. Trang chủ, Giới thiệu, Năng lực và Liên hệ đều hiển thị “URL nằm trên Google” và “Trang đã lập chỉ mục”. Ba trang phụ cũng có một Breadcrumb hợp lệ; trang chủ báo chưa lập chỉ mục video nào. Không gửi lại yêu cầu cho các trang đã được lập chỉ mục.
+
+Trang /dich-vu-pccc chưa được lập chỉ mục tại thời điểm kiểm tra. Đã gửi yêu cầu và Google xác nhận “Đã yêu cầu lập chỉ mục”, thêm URL vào hàng đợi ưu tiên. Hạn ngạch ngày 08/09 không còn chặn lần gửi này. Yêu cầu được nhận không đồng nghĩa đã lập chỉ mục.
+
+Tổng quan báo 0 lượt nhấp, báo cáo lập chỉ mục còn xử lý và chưa có dữ liệu Core Web Vitals. Không suy ra thứ hạng hoặc độ phủ toàn bộ 52 URL. Kết quả này thay thế trạng thái chờ gửi bốn URL trong các mục tiến độ cũ; xem google-checks.json. DNS, email và kích hoạt dịch vụ Vercel chưa được kiểm tra lại trong lượt này.
