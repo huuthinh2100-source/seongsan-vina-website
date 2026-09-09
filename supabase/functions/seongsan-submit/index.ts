@@ -1,5 +1,5 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
-const origins = ['https://seongsan-vina-website.vercel.app','https://seongsanvina.com','https://www.seongsanvina.com'];
+const origins = ['https://seongsan-vina-website.vercel.app'];
 const allowed = (o:string|null) => !o || origins.includes(o) || /^https:\/\/seongsan-vina-website-[a-z0-9-]+\.vercel\.app$/.test(o) || /^http:\/\/(localhost|127\.0\.0\.1):\d+$/.test(o);
 function headers(req:Request) {return {'Access-Control-Allow-Origin':allowed(req.headers.get('origin'))?(req.headers.get('origin')||origins[0]):origins[0],'Access-Control-Allow-Headers':'authorization, apikey, content-type, x-client-info','Access-Control-Allow-Methods':'GET, POST, OPTIONS','Vary':'Origin','Content-Type':'application/json','Cache-Control':'no-store'};}
 function json(req:Request,value:unknown,status=200){return new Response(JSON.stringify(value),{status,headers:headers(req)});}
@@ -29,7 +29,7 @@ Deno.serve(async(req:Request)=>{
   const inserted=await rest('leads',{...values,site:'seongsan',source:'website',status:'Mới',notes:test?'Automated Seongsan QA test; safe to remove after verification':null},'POST',{Prefer:'return=representation'});const [lead]=await inserted.json();
   let notification='pending';try{await rest('seongsan_notification_outbox',{lead_id:lead.id});}catch{console.error('Outbox enqueue failed for saved lead');}
   const resend=Deno.env.get('RESEND_API_KEY'),from=Deno.env.get('SEONGSAN_MAIL_FROM');
-  if(resend&&from&&!test){try{const mail=await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:'Bearer '+resend,'Content-Type':'application/json','Idempotency-Key':'seongsan-'+lead.id},body:JSON.stringify({from,to:['seongsantm@gmail.com'],subject:'Yêu cầu tư vấn mới — Seongsan Vina',text:Object.entries(values).map(([k,v])=>k+': '+v).join('\n')}),signal:AbortSignal.timeout(5000)});if(mail.ok){notification='sent';await rest('seongsan_notification_outbox?lead_id=eq.'+lead.id,{status:'sent',sent_at:new Date().toISOString()},'PATCH');}}catch{console.error('Lead saved; email pending');}}
+  if(resend&&from&&!test){try{const mail=await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:'Bearer '+resend,'Content-Type':'application/json','Idempotency-Key':'seongsan-'+lead.id},body:JSON.stringify({from,to:['soengsanjsc@gmail.com'],subject:'Yêu cầu tư vấn mới — Seongsan Vina',text:Object.entries(values).map(([k,v])=>k+': '+v).join('\n')}),signal:AbortSignal.timeout(5000)});if(mail.ok){notification='sent';await rest('seongsan_notification_outbox?lead_id=eq.'+lead.id,{status:'sent',sent_at:new Date().toISOString()},'PATCH');}}catch{console.error('Lead saved; email pending');}}
   return json(req,{ok:true,id:lead.id,notification},201);
  }catch(e){console.error(e instanceof Error?e.message:'Submission failed');return json(req,{ok:false,error:'Receipt could not be confirmed'},503);}
 });

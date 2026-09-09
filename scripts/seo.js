@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),{load}=require('cheerio');
 const pages={
  'index':['PCCC, xây dựng và cơ điện | Seongsan Vina','Khám phá dịch vụ xây dựng công nghiệp, cơ điện M&E và PCCC của Seongsan Vina. Liên hệ trao đổi phạm vi công trình.'],
- 'gioi-thieu':['Giới thiệu doanh nghiệp | Seongsan Vina','Tìm hiểu Seongsan Vina và các lĩnh vực xây dựng công nghiệp, cơ điện, PCCC. Liên hệ để nhận thông tin doanh nghiệp.'],
+ 'gioi-thieu':['Seongsan Vina — Mã số thuế 2601057075','Công ty Cổ phần Seongsan Vina, MST 2601057075 tại Phú Thọ: PCCC, xây dựng và cơ điện. Liên hệ để nhận hồ sơ doanh nghiệp.'],
  'nang-luc':['Hồ sơ năng lực nhà thầu | Seongsan Vina','Tham khảo năng lực và phạm vi dịch vụ Seongsan Vina. Liên hệ nhận hồ sơ hiện hành phù hợp với yêu cầu mời thầu.'],
  'dich-vu-pccc':['Dịch vụ PCCC cho nhà máy | Seongsan Vina','Tư vấn thiết kế, thi công và bảo trì hệ thống PCCC cho nhà máy. Liên hệ Seongsan Vina để trao đổi nhu cầu khảo sát.'],
  'xay-dung-me':['Xây dựng công nghiệp và M&E | Seongsan Vina','Dịch vụ xây dựng nhà xưởng và cơ điện M&E cho công trình công nghiệp. Liên hệ Seongsan Vina để làm rõ phạm vi triển khai.'],
